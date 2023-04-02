@@ -16,7 +16,7 @@ const Login: React.FC = () => {
       <h2 css={styles.header}>ユーザー登録</h2>
       <div css={styles.container}>
         <Input text="メールアドレス" value={email} onChange={(v: string) => setEmail(v)}/>
-        <Input text="パスワード" value={password} onChange={(v: string) => setPassword(v)}/>
+        <Input text="パスワード" value={password} onChange={(v: string) => setPassword(v)} type="password" />
         <div  css={{marginBottom:"20px"}}>
           <Button backgroundColor="white" text="ログイン" onClick={() => login({ email, password })} />
         </div>
