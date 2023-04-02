@@ -26,7 +26,7 @@ export const useLogin = () => {
         } else {
           alert('このユーザーは存在しません！')
         }
-        router.push('/user')
+        router.push('/')
       })
       .catch((error) => {
         const errorMessage = error.message
