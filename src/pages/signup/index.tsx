@@ -3,14 +3,14 @@ import { styles } from 'src/styles/signupStyles'
 import { useRouter } from 'next/router'
 import { doc, setDoc } from 'firebase/firestore'
 import { db } from 'src/firebase/firebase'
-import { SignUpData } from 'src/libs/atom'
+import { globalUserData } from 'src/libs/atom'
 import { useAtom } from 'jotai'
 import { Input } from 'src/components/Input'
 import { Button } from 'src/components/Button'
 
 const Signup: React.FC = () => {
   const router = useRouter()
-  const [user, setUser] = useAtom(SignUpData)
+  const [user, setUser] = useAtom(globalUserData)
   const [name, setName] = useState('')
   const [bankName, setBankName] = useState('')
   const [bankNumber, setBankNumber] = useState('')
@@ -24,7 +24,7 @@ const Signup: React.FC = () => {
         name: name,
         bankName: bankName,
         bankNumber: bankNumber,
-        wage:wage,
+        wage: wage,
       })
       setUser({
         ...user,
@@ -32,12 +32,11 @@ const Signup: React.FC = () => {
         name: name,
         bankName: bankName,
         bankNumber: bankNumber,
-        wage:wage,
+        wage: wage,
       })
       router.push('/')
     } else {
       alert('再度ユーザー登録をしてください。')
-      router.push('/login')
     }
   }
   return (

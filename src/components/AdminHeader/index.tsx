@@ -9,7 +9,7 @@ export const AdminHeader:React.FC = () => {
         <h2 css={styles.title}>人件費管理</h2>
         <div css={styles.lists}>
           <Link href="/admin/add-member"><p css={styles.list}>データ入力</p></Link>
-          <Link href="/user"><p css={styles.list}>打刻ページ</p></Link>
+          <Link href="/"><p css={styles.list}>打刻ページ</p></Link>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ import { Header } from 'src/components/Header'
 import { MonthlyGoal } from 'src/components/MonthlyGoal'
 import { db } from 'src/firebase/firebase'
 import { globalUserData } from 'src/libs/atom'
-// import { backgroundColor } from "src/libs/atom"
+
 import { styles } from 'src/styles/userStyles'
 import type { User } from 'src/types'
 

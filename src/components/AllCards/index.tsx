@@ -8,7 +8,6 @@ type Props = {
 }
 
 export const AllCards: React.FC<Props> = ({ user }) => {
-  // 変更開始
   const [backgroundColor, setBackgroundColor] = useState(user.type === 'in-working' ? "orange" : "white");
 
   const [isOpenModal, setIsOpenModal] = useState(false)
@@ -16,10 +15,14 @@ export const AllCards: React.FC<Props> = ({ user }) => {
   const showModal = () => {
     setIsOpenModal(true)
   }
-
   useEffect(() => {
-    setBackgroundColor(user.type === 'in-working' ? "orange" : "white");
-  }, [user.type]);
+    if(user.type === "in-working") {
+      setBackgroundColor("orange")
+    } else {
+      setBackgroundColor("white")
+    }
+  },[user.type])
+
   return (
     <div>
       <UserCard
