@@ -9,7 +9,7 @@ import { EachPay } from "src/components/EachPay"
 
 const Admin: React.FC = () => {
   const [isOpenModal, setIsOpenModal] = useState(false)
-  const [data, setData] = useState<User[]>()
+  const [, setData] = useState<User[]>()
 
   useEffect(() => {
     const fetchData = async () => {

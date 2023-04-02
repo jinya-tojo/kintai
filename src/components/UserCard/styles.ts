@@ -15,6 +15,10 @@ export const getBackgroundColorStyle = (color: string) => {
       return css`
         background-color: #f7b2bd;
       `
+    default:
+      return css`
+        background-color: #f7b2bd;
+      `
   }
 }
 

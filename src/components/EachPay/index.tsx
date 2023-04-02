@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { styles } from "./styles";
 import { Button } from "../Button";
 import type { User } from "src/types";
-import { collection, DocumentData, getDocs, query, where } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "src/firebase/firebase";
 import { convertTimeToHours, formatToDay } from "src/libs/day";
 
@@ -12,7 +12,6 @@ type Props = {
 }
 
 export const EachPay: React.FC<Props> = ({onClick, color}) => {
-  const today = formatToDay(Date.now())
   const [users, setUsers] = useState<User[]>();
 
   useEffect(() => {
@@ -36,7 +35,7 @@ export const EachPay: React.FC<Props> = ({onClick, color}) => {
   
   return(
     <>
-      {users?.map((user, index) => {
+      {users?.map((user) => {
         return (
           <div css={styles.memberItem}>
             <p css={styles.eachItem}>{user.name}</p>

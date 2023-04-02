@@ -3,7 +3,7 @@ export type User = {
   name: string
   bankName: string
   bankNumber: string
-  wage: string
+  wage: number
   type: 'in-working' | 'out-working'
   start_time: number
   end_time: number

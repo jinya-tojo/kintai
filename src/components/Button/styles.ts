@@ -21,6 +21,12 @@ export const getBackgroundColorStyle = (color: string) => {
         border:1px solid #184b66;
         color: #fff;
       `
+    default:
+      return css`
+        background-color: #fff;
+        border:1px solid #ddd;
+        color: #184b66;
+      `
   }
 }
 

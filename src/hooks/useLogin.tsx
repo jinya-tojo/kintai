@@ -1,9 +1,9 @@
-import { SignUpData, globalUserData } from './../libs/atom'
+import { globalUserData } from './../libs/atom'
 import { useRouter } from 'next/router'
 import { useAtom } from 'jotai'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth, db } from 'src/firebase/firebase'
-import { collection, doc, getDoc, getDocs } from 'firebase/firestore'
+import { doc, getDoc } from 'firebase/firestore'
 import type { User } from 'src/types'
 
 type Props = {
@@ -12,7 +12,7 @@ type Props = {
 }
 
 export const useLogin = () => {
-  const [userData, setUserData] = useAtom(globalUserData)
+  const [, setUserData] = useAtom(globalUserData)
   const router = useRouter()
   const login = ({ email, password }: Props) =>
     signInWithEmailAndPassword(auth, email, password)
