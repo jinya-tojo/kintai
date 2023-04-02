@@ -34,10 +34,10 @@ const Signup: React.FC = () => {
         bankNumber: bankNumber,
         wage:wage,
       })
-      router.push('/user')
+      router.push('/')
     } else {
       alert('再度ユーザー登録をしてください。')
-      router.push('/home')
+      router.push('/login')
     }
   }
   return (
