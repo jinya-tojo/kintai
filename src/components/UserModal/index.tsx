@@ -74,7 +74,7 @@ export const UserModal: React.FC<Props> = ({
       {showFlag ? (
         <div css={styles.overlay} onClick={onClickButton}>
           <div css={styles.container}>
-            <h2>{user.name}</h2>
+            <h2 css={styles.name}>{user.name}</h2>
             <div css={styles.buttons}>
               <Button onClick={startWork} text="出勤" backgroundColor="white" />
               <Button onClick={endWork} text="退勤" backgroundColor="white" />

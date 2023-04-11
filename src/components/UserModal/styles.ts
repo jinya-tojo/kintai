@@ -18,7 +18,7 @@ export const styles = makeStyles({
     background-color: white;
     border:1px solid #ddd;
     border-radius: 10px;
-    width:350px;
+    width:300px;
     padding:20px;
     position:absolute;
     left:50%;
@@ -28,13 +28,14 @@ export const styles = makeStyles({
     top:300px;
     z-index:10;
   `,
+  name: () => css`
+    margin-left:33px;
+  `,
   buttons: () => css`
     display:flex;
     justify-content: space-around;
     padding:15px 0;
   `,
-  items: () => css`
-    font-size: 20px;
-  `
+  
 
 })
